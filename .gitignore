@@ -1,0 +1,21 @@
+# Binary executables
+process
+thread
+
+# Object files
+*.o
+
+# Compiled binaries or test outputs
+*.out
+*.log
+*.tmp
+*.bak
+
+# Temporary files from editors
+.DS_Store
+Thumbs.db
+*.swp
+*~
+
+# IDE/editor folders
+.vscode/
