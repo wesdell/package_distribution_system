@@ -1,23 +1,14 @@
-# Compiler and flags
 CC = gcc
-CFLAGS = -Wall -Wextra -Iinclude -pthread
-SRC_DIR = src
-OBJ_DIR = obj
+CFLAGS = -Wall -Iinclude -lpthread
+SRC = src
 
-# Sources
-UTILS = $(SRC_DIR)/utils.c $(SRC_DIR)/transactions.c
+all: thread process
 
-# Targets
-all: process thread
+thread: $(SRC)/thread.c $(SRC)/transactions.c $(SRC)/utils.c
+	$(CC) $(CFLAGS) $^ -o thread
 
-process: $(SRC_DIR)/process.c $(UTILS)
-	$(CC) $(CFLAGS) -o process $(SRC_DIR)/process.c $(UTILS)
-
-thread: $(SRC_DIR)/thread.c $(UTILS)
-	$(CC) $(CFLAGS) -o thread $(SRC_DIR)/thread.c $(UTILS)
+process: $(SRC)/process.c $(SRC)/transactions.c $(SRC)/utils.c
+	$(CC) $(CFLAGS) $^ -o process
 
 clean:
-	rm -f process thread *.o *.out *.log
-	rm -f results/*.txt
-
-.PHONY: all clean
+	rm -f thread process results/*
