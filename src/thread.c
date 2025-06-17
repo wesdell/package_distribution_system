@@ -25,7 +25,7 @@ void* process_group(void* arg) {
 }
 
 int main() {
-  // Define 16 groups labeled A to P
+  // Define 16 groups labeled A to P.
   char* groups[] = {
       "A", "B", "C", "D", "E", "F", "G", "H",
       "I", "J", "K", "L", "M", "N", "O", "P"};
