@@ -4,25 +4,25 @@ This project compares the performance of single-thread and multi-thread approach
 
 ## 📘 Table of Contents
 
-[🚀 Project Overview](#🧪-objective)
+[🚀 Project Overview](#-objective)
 
-[📁 Project Structure](#📁-project-structure)
+[📁 Project Structure](#-project-structure)
 
-[⚙️ Requirements](#⚙️-requirements)
+[⚙️ Requirements](#-requirements)
 
-[🔧 How to Run](#🔧-how-to-run)
+[🔧 How to Run](#-how-to-run)
 
-[👀 Example](#👀-example)
+[👀 Example](#-example)
 
-[📊 Performance Comparison ](#📈-output)
+[📊 Performance Comparison ](#-output)
 
-[📌 When to Use Threads vs Processes](#🧠-analysis)
+[📌 When to Use Threads vs Processes](#-analysis)
 
-[🔐 Synchronization Issues and Solutions](#🔐-synchronization-issues-and-solutions)
+[🔐 Synchronization Issues and Solutions](#-synchronization-issues-and-solutions)
 
-[🧑‍💻 Team Members](#🧑‍💻-authors)
+[🧑‍💻 Team Members](#-authors)
 
-[📄 License](#📄-license)
+[📄 License](#-license)
 
 ## 🧪 Objective
 
