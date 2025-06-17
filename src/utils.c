@@ -1,27 +1,11 @@
 #include "utils.h"
+
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
 
-// Returns the current timestamp in milliseconds
-long long current_timestamp_ms(void) {
-    struct timespec ts;
-    clock_gettime(CLOCK_REALTIME, &ts); // Gets current time
-    return (long long)ts.tv_sec * 1000 + ts.tv_nsec / 1000000;
-}
+// Computes and prints the time elapsed with a custom label
+void display_time(const char* label, struct timespec start, struct timespec end) {
+  double duration = (end.tv_sec - start.tv_sec) +
+                    (end.tv_nsec - start.tv_nsec) / 1e9;
 
-// Logs an informational message to standard output
-void log_info(const char *msg) {
-    printf("[INFO] %s\n", msg);
-}
-
-// Logs an error message to standard error
-void log_error(const char *msg) {
-    fprintf(stderr, "[ERROR] %s\n", msg);
-}
-
-// Logs an error and exits the program with code 1
-void die(const char *msg) {
-    log_error(msg);  // Print the error
-    exit(1);         // Exit the program with failure
+  printf("[%s] Duration: %.6f seconds\n", label, duration);
 }

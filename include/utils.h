@@ -1,16 +1,9 @@
-#ifndef UTILS_H
-#define UTILS_H
+#ifndef UTILS_TIME_H
+#define UTILS_TIME_H
 
-// Returns the current system time in milliseconds
-long long current_timestamp_ms(void);
+#include <time.h>
 
-// Prints an informational message to standard output
-void log_info(const char *msg);
-
-// Prints an error message to standard error
-void log_error(const char *msg);
-
-// Prints an error and exits the program with status 1
-void die(const char *msg);
+// Displays the elapsed time between two timestamps with a label
+void display_time(const char* label, struct timespec start, struct timespec end);
 
 #endif
